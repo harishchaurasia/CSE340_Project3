@@ -49,7 +49,7 @@ string InputBuffer::UngetString(string s)
     return s;
 }
 
-// for project 2, we implement peekchar, to look ahead of a character
+// for project 2, we implemented peekchar, to look ahead of a character
 
 char InputBuffer::PeekChar()
 {
