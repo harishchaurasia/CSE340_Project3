@@ -3,6 +3,12 @@
  *
  * Do not share this file with anyone
  */
+
+/*
+*** Name: Harish Chaurasia
+*** CSE 340-Project_3 Type Checking
+*/
+
 #include <iostream>
 #include <istream>
 #include <vector>

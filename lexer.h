@@ -1,3 +1,14 @@
+/*
+ * Copyright (C) Rida Bazzi, 2016
+ *
+ * Do not share this file with anyone
+ */
+
+/*
+*** Name: Harish Chaurasia
+*** CSE 340-Project_3 Type Checking
+*/
+
 #ifndef __LEXER__H__
 #define __LEXER__H__
 
@@ -43,9 +54,7 @@ typedef enum
     LBRACE,
     RBRACE,
     ID,
-    ERROR
-
-    // TODO: Add labels for new token types here
+    ERROR // TODO: Add labels for new token types here
 } TokenType;
 
 class Token
@@ -58,15 +67,20 @@ public:
     int line_no;
 };
 
+// custom methods built form the parser
+void typeUpdating(int LHS, int RHS);
+void addList(std::string n, int lN, int t);
+int searchList(std::string n);
+
 class LexicalAnalyzer
 {
 public:
     Token GetToken();
     TokenType UngetToken(Token);
     LexicalAnalyzer();
+
     bool IsOctalDigit(char c);
     bool IsHexDigit(char c);
-
     void ConsumeRealNumber();
     void ConsumeBase16Number();
     void ConsumeBase08Number();
